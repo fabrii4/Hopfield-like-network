@@ -14,3 +14,5 @@ In this example, 10 samples from the MINST dataset (1 for each class) are stored
 When 10 different samples from the same dataset are run throught the network, they are correctly classified most of the time.
 
 A simple improvement on this approach would be to consider a 2-layer architecture where multiple samples for each class are stored in the first layer and assigned to the same output neuron in the second layer.   
+
+A more interesting way of improvement could come from using the tools of [M-theory](https://en.wikipedia.org/wiki/M-theory_(learning_framework)), in particular invariant representations and templates.

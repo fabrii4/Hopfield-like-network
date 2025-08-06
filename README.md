@@ -6,13 +6,9 @@ As briefly discussed in [Hopfield-like network.pdf](./Hopfield-like%20network.pd
 an Hopfield-like feed-forward network is capable to store and retrieve an 
 indefinite number of patterns (given by the number of output neurons).
 
-Experiments are in progress to determine if this mechanism could be useful in the realization of an unsupervised network 
-for image segmentation/classification.
-
 A simple proof of concept of such a network is provided in [HN_minst_test.py](./HN_minst_test.py).
 In this example, 10 samples from the MINST dataset (1 for each class) are stored in a 1-layer Hopfield-like network.
 When 10 different samples from the same dataset are run throught the network, they are correctly classified most of the time.
 
-A simple improvement on this approach would be to consider a 2-layer architecture where multiple samples for each class are stored in the first layer and assigned to the same output neuron in the second layer.   
-
-A more interesting way of improvement could come from using the tools of [M-theory](https://en.wikipedia.org/wiki/M-theory_(learning_framework)), in particular invariant representations and templates.
+A simple improvement on this approach would be to consider a 2-layers architecture where multiple samples for each class are stored in the first layer and assigned to the same output neuron in the second layer.   
+An example of this approach is given in [hopfield_with_encoder.py](./tests/hopfield_with_encoder.py) where patterns from the MNIST dataset are first encoded by a convolutional encoder and then stored in a 2-layers Hopfield network.
